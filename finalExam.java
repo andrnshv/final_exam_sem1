@@ -43,13 +43,14 @@ public class finalExam {
         String enterToBorrow = sc.nextLine();
         
         for (int i = 1; i < lib.length; i++) {
-            if (lib[i][0].equals(enterToBorrow)) {
+            if (lib[i][0].equalsIgnoreCase(enterToBorrow)) {
                 if (lib[i][3].equalsIgnoreCase("Available")) {
                     lib[i][3] = "Borrowed";
                     System.out.println("You have successfully borrowed: " + lib[i][1]);
                     System.out.println();
                 } else {
                     System.out.println("The book is already borrowed.");
+                    System.out.println();
                 }
                 return;
             }
@@ -72,7 +73,8 @@ public class finalExam {
                     System.out.println();
                 } 
                 else {
-                    System.out.println("This book index is not borrowed."); 
+                    System.out.println("This book index is not borrowed.");
+                    System.out.println();
                 } 
                 return; 
             } 
